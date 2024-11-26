@@ -2,7 +2,7 @@ import { Col, Container, Row, ListGroup } from "react-bootstrap";
 
 const CustomFooter = () => {
   return (
-    <Container fluid className="mt-2 bg-dark data-bs-theme-dark">
+    <Container fluid className="bg-dark data-bs-theme-dark">
       <Row className="justify-content-center">
         <Col
           sm="12"

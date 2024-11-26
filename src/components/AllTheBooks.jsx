@@ -13,16 +13,18 @@ const AllTheBooks = () => {
         {libri.map((libro) => {
           return (
             <Col sm="6" md="4">
-              <Card
-                key={libro.asin}
-                className="bg-dark border-warning"
-              >
-                <Card.Img className="img-fluid border-bottom border-warning" variant="top" src={libro.img} />
-                <Card.Body className="text-warning">
+              <Card key={libro.asin} className="bg-dark border-warning h-100">
+                <Card.Img
+                  className="img-fluid border-bottom border-warning"
+                  variant="top"
+                  src={libro.img}
+                  alt={libro.title + " cover"}
+                />
+                <Card.Body className="text-warning flex-grow-1">
                   <Card.Title className="text-truncate">
                     {libro.title}
                   </Card.Title>
-                  <Card.Text>{libro.price}€</Card.Text>
+                  <Card.Text>{libro.price} €</Card.Text>
                   <Button variant="warning">Aggiungi al carrello</Button>
                 </Card.Body>
               </Card>
