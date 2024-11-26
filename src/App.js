@@ -21,7 +21,7 @@ function App() {
       <header>
         <CustomNavbar />
       </header>
-      <main>
+      <main className="bg-dark">
         <CustomWelcome />
         <AllTheBooks />
       </main>
