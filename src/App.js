@@ -1,5 +1,7 @@
 import "./App.css";
 
+import books from "./data/fantasy.json";
+
 //allego il foglio bootstrap al progetto
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -12,8 +14,7 @@ import CustomFooter from "./components/CustomFooter";
 // importo l'alert
 import CustomWelcome from "./components/CustomWelcome";
 
-//importo le card Fantasy
-import AllTheBooks from "./components/AllTheBooks";
+import BookList from "./components/BookList";
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
       </header>
       <main className="bg-dark">
         <CustomWelcome />
-        <AllTheBooks />
+
+        <BookList FantasyBooks={books} />
       </main>
       <footer>
         <CustomFooter />
