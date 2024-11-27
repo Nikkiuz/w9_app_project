@@ -11,12 +11,13 @@ class SingleBook extends Component {
       <Col sm="6" md="4">
         <Card
           className="bg-dark border-warning h-100"
-          onClick={() => this.setState({ selected: !this.state.selected })}
+          style={{
+            border: this.state.selected ? "8px solid" : "",
+          }}
         >
           <Card.Img
-            className={
-              'img-fluid border-bottom border-warning ${this.state.selected ? "selected" : "" '
-            }
+            onClick={() => this.setState({ selected: !this.state.selected })}
+            className="img-fluid border-bottom border-warning"
             variant="top"
             src={this.props.book.img}
             alt={this.props.book.title + " cover"}
