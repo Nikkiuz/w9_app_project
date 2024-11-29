@@ -41,7 +41,9 @@ class CommentArea extends Component {
   render() {
     return (
       <>
-        <h5 className="text-warning text-center">Recensioni degli utenti</h5>
+        <h5 className="text-warning text-center mb-3">
+          Recensioni degli utenti
+        </h5>
         <CommentsList comments={this.state.comments} />
       </>
     );
