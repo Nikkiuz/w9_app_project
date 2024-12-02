@@ -11,7 +11,7 @@ class SingleBook extends Component {
     return (
       <Col sm="6" md="4">
         <Card
-          className="bg-dark border-warning"
+          className="bg-dark border-warning h-100"
           style={{
             border: this.state.selected ? "8px solid" : "",
           }}
