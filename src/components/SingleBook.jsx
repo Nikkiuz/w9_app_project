@@ -1,4 +1,4 @@
-import { Card, Button, Col } from "react-bootstrap";
+import { Card, Col } from "react-bootstrap";
 import { Component } from "react";
 import CommentArea from "./CommentArea";
 
