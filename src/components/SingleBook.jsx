@@ -9,11 +9,12 @@ class SingleBook extends Component {
         <Card
           className="bg-dark border-warning h-100"
           onClick={() => {
-           this.props.changeState();
+            this.props.changeState(this.props.book.asin);
           }}
           value={this.props.selected}
           style={{
-            border: this.props.selected ? "8px solid" : "",
+            border:
+              this.props.selected === this.props.book.asin ? "8px solid" : "",
           }}
         >
           <Card.Img
@@ -27,12 +28,12 @@ class SingleBook extends Component {
             <Card.Text className="flex-grow-1 text-end">
               {this.props.book.price} €
             </Card.Text>
-            {this.selected && <CommentArea id={this.props.book.asin} />}
+            {/* {this.selected && <CommentArea id={this.props.book.asin} />}
             {this.selected && (
               <Button className="mt-3" variant="warning">
                 Lascia una recensione
               </Button>
-            )}
+            )} */}
           </Card.Body>
         </Card>
       </Col>

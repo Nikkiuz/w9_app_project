@@ -12,7 +12,7 @@ class CommentArea extends Component {
       {
         headers: {
           authorization:
-            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzQ4Nzk1NzA2ZmM4YzAwMTU2Yjg3MTEiLCJpYXQiOjE3MzI4MDI5MDMsImV4cCI6MTczNDAxMjUwM30.Du_pOmyK1rR2H1qWKVvnvxap02VFqbORi74hQHBhwSI",
+            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzQ4NmYwNTA2ZmM4YzAwMTU2Yjg2ZmIiLCJpYXQiOjE3MzI4MDAyNjIsImV4cCI6MTczNDAwOTg2Mn0.LBzHQxm8Ovl76SSc6dJv3F12CSJnOAhnNlzvhQB2oec",
         },
       }
     )
@@ -33,6 +33,12 @@ class CommentArea extends Component {
         console.log(err);
       });
   };
+
+  componentDidUpdate(prevProps) {
+    if (this.props.id !== prevProps.id) {
+      this.getComments();
+    }
+  }
 
   componentDidMount() {
     this.getComments();
