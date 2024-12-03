@@ -28,6 +28,7 @@ const App = () => {
   //   selected: false,
   // };
 
+  // eslint-disable-next-line no-unused-vars
   const [id, setid] = useState("");
   const [selected, setSelected] = useState(false);
 
