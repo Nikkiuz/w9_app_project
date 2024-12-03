@@ -1,19 +1,17 @@
-import { Component } from "react";
 import SingleBook from "./SingleBook";
 import { Container, Row } from "react-bootstrap";
 
-class BookList extends Component {
-  render() {
+const BookList = (props) => {
     return (
       <Container>
         <Row className="g-2">
-          {this.props.FantasyBooks.slice(0, 10).map((OneBook) => {
+          {props.FantasyBooks.slice(0, 10).map((OneBook) => {
             return (
               <SingleBook
                 book={OneBook}
                 key={OneBook.asin}
-                changeState={this.props.changeState}
-                selected={this.props.selected}
+                changeState={props.changeState}
+                selected={props.selected}
               />
             );
           })}
@@ -21,5 +19,4 @@ class BookList extends Component {
       </Container>
     );
   }
-}
 export default BookList;
