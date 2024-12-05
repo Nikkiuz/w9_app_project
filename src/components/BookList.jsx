@@ -1,11 +1,12 @@
-import SingleBook from "./SingleBook";
-import { Container, Row } from "react-bootstrap";
+import SingleBook from './SingleBook'
+import { Container, Row } from 'react-bootstrap'
 
 const BookList = (props) => {
   return (
     <Container>
       <Row className="g-2">
-        {props.FantasyBooks.slice(0, 10).map((OneBook) => {
+        {props.FantasyBooks.map((OneBook) => {
+          console.log('lunghezza', props.FantasyBooks.length)
           return (
             <SingleBook
               book={OneBook}
@@ -13,10 +14,10 @@ const BookList = (props) => {
               changeState={props.changeState}
               selected={props.selected}
             />
-          );
+          )
         })}
       </Row>
     </Container>
-  );
-};
-export default BookList;
+  )
+}
+export default BookList

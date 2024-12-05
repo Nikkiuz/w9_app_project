@@ -1,23 +1,24 @@
-import { Card, Col } from "react-bootstrap";
+import { Card, Col } from 'react-bootstrap'
 
 const SingleBook = (props) => {
   return (
     <Col sm="6" md="4">
       <Card
+        data-testid="book"
         className="bg-dark border-warning h-100"
         onClick={() => {
-          props.changeState(props.book.asin);
+          props.changeState(props.book.asin)
         }}
         value={props.selected}
         style={{
-          border: props.selected === props.book.asin ? "8px solid" : "",
+          border: props.selected === props.book.asin ? '8px solid' : '',
         }}
       >
         <Card.Img
           className="img-fluid border-bottom border-warning"
           variant="top"
           src={props.book.img}
-          alt={props.book.title + " cover"}
+          alt={props.book.title + ' cover'}
         />
         <Card.Body className="text-warning d-flex flex-column">
           <Card.Title className="">{props.book.title}</Card.Title>
@@ -27,7 +28,7 @@ const SingleBook = (props) => {
         </Card.Body>
       </Card>
     </Col>
-  );
-};
+  )
+}
 
-export default SingleBook;
+export default SingleBook
